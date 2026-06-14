@@ -35,9 +35,9 @@ export default function Footer() {
 
   const socialLinks = [
     { name: "LinkedIn", icon: LinkedinIcon, href: "https://linkedin.com/company/nexscale" },
-    { name: "Instagram", icon: InstagramIcon, href: "https://instagram.com/nexscale" },
-    { name: "Facebook", icon: FacebookIcon, href: "https://facebook.com/nexscale" },
-    { name: "YouTube", icon: YoutubeIcon, href: "https://youtube.com/nexscale" },
+    { name: "Instagram", icon: InstagramIcon, href: "https://www.instagram.com/nexscale77" },
+    { name: "Facebook", icon: FacebookIcon, href: "https://www.facebook.com/share/1jfjBviydp/" },
+    { name: "YouTube", icon: YoutubeIcon, href: "https://youtube.com/@nexscale77" },
     { name: "WhatsApp", icon: MessageSquare, href: "https://wa.me/917709215976" },
   ];
 

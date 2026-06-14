@@ -32,9 +32,6 @@ export const metadata: Metadata = {
     title: "NexScale | Website Development, Automation & AI Solutions",
     description: "NexScale helps businesses scale through website development, business automation, customer retention systems, AI solutions, trading technology, and digital transformation services.",
   },
-  icons: {
-    icon: "/favicon.ico",
-  },
 };
 
 export default function RootLayout({
@@ -88,9 +85,9 @@ export default function RootLayout({
     ],
     "sameAs": [
       "https://linkedin.com/company/nexscale",
-      "https://instagram.com/nexscale",
-      "https://facebook.com/nexscale",
-      "https://youtube.com/nexscale"
+      "https://www.instagram.com/nexscale77",
+      "https://www.facebook.com/share/1jfjBviydp/",
+      "https://youtube.com/@nexscale77"
     ]
   };
 
