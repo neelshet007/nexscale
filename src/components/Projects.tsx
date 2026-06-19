@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import { projectsData } from "../data/projects";
+import { siteConfig } from "../config/siteConfig";
 import { ExternalLink, Code, ArrowRight } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
@@ -12,9 +12,10 @@ const GithubIcon = () => (
 );
 
 export default function Projects() {
+  const projectsData = siteConfig.projects;
   const [activeCategory, setActiveCategory] = useState<string>("All");
 
-  const categories = ["All", "Algorithmic Trading", "Healthcare Technology"];
+  const categories = ["All", ...Array.from(new Set(projectsData.map(p => p.category)))];
 
   const filteredProjects = activeCategory === "All"
     ? projectsData

@@ -3,6 +3,7 @@
 import React from "react";
 import { Briefcase, TrendingUp, Zap, HelpCircle } from "lucide-react";
 import { motion } from "framer-motion";
+import { siteConfig } from "../config/siteConfig";
 
 const reasons = [
   {
@@ -36,7 +37,7 @@ export default function WhyChooseUs() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
           {/* Header Area */}
           <div className="lg:col-span-5">
-            <span className="text-xs font-semibold uppercase tracking-wider text-emerald-400">Why NexScale</span>
+            <span className="text-xs font-semibold uppercase tracking-wider text-emerald-400">Why {siteConfig.companyName}</span>
             <h2 className="mt-3 text-3xl sm:text-4xl font-bold text-white tracking-tight leading-tight">
               A Software Partner Designed For Your Success
             </h2>
@@ -45,10 +46,10 @@ export default function WhyChooseUs() {
             </p>
             <div className="mt-8 flex">
               <a
-                href="#contact"
+                href={siteConfig.ctas.primary.href}
                 className="px-6 py-3 rounded-full text-xs font-semibold bg-emerald-950/40 text-emerald-300 border border-emerald-500/30 hover:bg-emerald-900/40 transition-all"
               >
-                Schedule Consultation
+                {siteConfig.ctas.primary.text}
               </a>
             </div>
           </div>

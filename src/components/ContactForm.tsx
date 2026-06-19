@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 import { Send, CheckCircle2, AlertCircle, Phone, Mail, MapPin } from "lucide-react";
 import { motion } from "framer-motion";
+import { siteConfig } from "../config/siteConfig";
 
 export default function ContactForm() {
   const [formData, setFormData] = useState({
@@ -35,8 +36,8 @@ export default function ContactForm() {
     setStatus("loading");
 
     // Construct WhatsApp pre-filled message
-    const targetPhone = "917709215976"; // Country code prefix + number
-    const messageText = `Hello Neil,
+    const targetPhone = siteConfig.contact.whatsappNumber;
+    const messageText = `Hello Neel,
 
 I would like to discuss a project.
 
@@ -96,8 +97,8 @@ Please contact me regarding this project.`;
                 </div>
                 <div>
                   <h4 className="text-xs font-bold text-gray-500 uppercase tracking-wider">Email Address</h4>
-                  <a href="mailto:nexscale7@gmail.com" className="text-sm font-semibold text-white mt-0.5 hover:underline">
-                    nexscale7@gmail.com
+                  <a href={`mailto:${siteConfig.contact.email}`} className="text-sm font-semibold text-white mt-0.5 hover:underline">
+                    {siteConfig.contact.email}
                   </a>
                 </div>
               </div>
@@ -108,8 +109,8 @@ Please contact me regarding this project.`;
                 </div>
                 <div>
                   <h4 className="text-xs font-bold text-gray-500 uppercase tracking-wider">Direct Call / WhatsApp</h4>
-                  <a href="https://wa.me/917709215976" target="_blank" rel="noopener noreferrer" className="text-sm font-semibold text-white mt-0.5 hover:underline">
-                    +91 7709215976
+                  <a href={siteConfig.socialLinks.whatsapp} target="_blank" rel="noopener noreferrer" className="text-sm font-semibold text-white mt-0.5 hover:underline">
+                    {siteConfig.contact.phone}
                   </a>
                 </div>
               </div>
@@ -120,7 +121,9 @@ Please contact me regarding this project.`;
                 </div>
                 <div>
                   <h4 className="text-xs font-bold text-gray-500 uppercase tracking-wider">Location</h4>
-                  <p className="text-sm font-semibold text-white mt-0.5">Dadar, Mumbai</p>
+                  <a href={siteConfig.contact.googleMapsLink} target="_blank" rel="noopener noreferrer" className="text-sm font-semibold text-white mt-0.5 hover:underline">
+                    {siteConfig.contact.address}
+                  </a>
                 </div>
               </div>
             </div>
@@ -137,9 +140,9 @@ Please contact me regarding this project.`;
                   className="text-center py-12 flex flex-col items-center justify-center"
                 >
                   <CheckCircle2 className="w-16 h-16 text-emerald-400 mb-6" />
-                  <h3 className="text-xl font-bold text-white mb-2">Redirecting to WhatsApp...</h3>
+                  <h3 className="text-xl font-bold text-white mb-2">{siteConfig.contactFormSettings.successMessage}</h3>
                   <p className="text-sm text-gray-400 max-w-sm leading-relaxed">
-                    Opening chat session with Neil. If the window did not open, please use the direct link button.
+                    {siteConfig.contactFormSettings.redirectDescription}
                   </p>
                 </motion.div>
               ) : (
@@ -228,14 +231,9 @@ Please contact me regarding this project.`;
                       className="w-full px-4 py-3 rounded-xl bg-gray-950 border border-white/5 text-sm text-white focus:outline-none focus:border-emerald-500/50 focus:ring-1 focus:ring-emerald-500/50 transition-all"
                     >
                       <option value="" disabled className="text-gray-600">Choose service option...</option>
-                      <option value="Website Development">Website Development</option>
-                      <option value="Business Automation">Business Automation</option>
-                      <option value="Customer Retention Systems">Customer Retention Systems</option>
-                      <option value="WhatsApp Automation">WhatsApp Automation</option>
-                      <option value="AI Solutions">AI Solutions</option>
-                      <option value="Trading Technology Solutions">Trading Technology Solutions</option>
-                      <option value="Custom Software Development">Custom Software Development</option>
-                      <option value="Other">Other</option>
+                      {siteConfig.contactFormSettings.serviceOptions.map((opt) => (
+                        <option key={opt} value={opt}>{opt}</option>
+                      ))}
                     </select>
                   </div>
 

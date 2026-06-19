@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { MessageSquare } from "lucide-react";
+import { siteConfig } from "../config/siteConfig";
 
 const LinkedinIcon = () => (
   <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -34,11 +35,11 @@ export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   const socialLinks = [
-    { name: "LinkedIn", icon: LinkedinIcon, href: "https://linkedin.com/company/nexscale" },
-    { name: "Instagram", icon: InstagramIcon, href: "https://www.instagram.com/nexscale77" },
-    { name: "Facebook", icon: FacebookIcon, href: "https://www.facebook.com/share/1jfjBviydp/" },
-    { name: "YouTube", icon: YoutubeIcon, href: "https://youtube.com/@nexscale77" },
-    { name: "WhatsApp", icon: MessageSquare, href: "https://wa.me/917709215976" },
+    { name: "LinkedIn", icon: LinkedinIcon, href: siteConfig.socialLinks.linkedin },
+    { name: "Instagram", icon: InstagramIcon, href: siteConfig.socialLinks.instagram },
+    { name: "Facebook", icon: FacebookIcon, href: siteConfig.socialLinks.facebook },
+    { name: "YouTube", icon: YoutubeIcon, href: siteConfig.socialLinks.youtube },
+    { name: "WhatsApp", icon: MessageSquare, href: siteConfig.socialLinks.whatsapp },
   ];
 
   return (
@@ -48,13 +49,13 @@ export default function Footer() {
           {/* Logo and Brand */}
           <div className="md:col-span-2">
             <span className="text-xl font-bold tracking-tight text-white flex items-center mb-4">
-              Nex
+              {siteConfig.logo.prefix}
               <span className="bg-gradient-to-r from-violet-400 to-emerald-400 bg-clip-text text-transparent">
-                Scale
+                {siteConfig.logo.suffix}
               </span>
             </span>
             <p className="text-sm text-gray-400 max-w-sm leading-relaxed">
-              Helping Businesses Scale Through Technology. We build reliable websites, automate operations, retain customers, and build algorithmic trading solutions.
+              {siteConfig.tagline}. We build reliable websites, automate operations, retain customers, and build algorithmic trading solutions.
             </p>
           </div>
 
@@ -70,6 +71,11 @@ export default function Footer() {
               <li>
                 <a href="#projects" className="text-sm text-gray-400 hover:text-white transition-colors">
                   Projects
+                </a>
+              </li>
+              <li>
+                <a href="#team" className="text-sm text-gray-400 hover:text-white transition-colors">
+                  Team
                 </a>
               </li>
               <li>

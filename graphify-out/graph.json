@@ -1,0 +1,694 @@
+{
+  "directed": false,
+  "multigraph": false,
+  "graph": {},
+  "nodes": [
+    {
+      "label": "eslint.config.mjs",
+      "file_type": "code",
+      "source_file": "C:\\NexScale\\eslint.config.mjs",
+      "source_location": "L1",
+      "id": "c_nexscale_eslint_config_mjs",
+      "community": 15,
+      "norm_label": "eslint.config.mjs"
+    },
+    {
+      "label": "next-env.d.ts",
+      "file_type": "code",
+      "source_file": "C:\\NexScale\\next-env.d.ts",
+      "source_location": "L1",
+      "id": "c_nexscale_next_env_d_ts",
+      "community": 16,
+      "norm_label": "next-env.d.ts"
+    },
+    {
+      "label": "next.config.ts",
+      "file_type": "code",
+      "source_file": "C:\\NexScale\\next.config.ts",
+      "source_location": "L1",
+      "id": "c_nexscale_next_config_ts",
+      "community": 17,
+      "norm_label": "next.config.ts"
+    },
+    {
+      "label": "postcss.config.mjs",
+      "file_type": "code",
+      "source_file": "C:\\NexScale\\postcss.config.mjs",
+      "source_location": "L1",
+      "id": "c_nexscale_postcss_config_mjs",
+      "community": 18,
+      "norm_label": "postcss.config.mjs"
+    },
+    {
+      "label": "layout.tsx",
+      "file_type": "code",
+      "source_file": "C:\\NexScale\\src\\app\\layout.tsx",
+      "source_location": "L1",
+      "id": "c_nexscale_src_app_layout_tsx",
+      "community": 3,
+      "norm_label": "layout.tsx"
+    },
+    {
+      "label": "RootLayout()",
+      "file_type": "code",
+      "source_file": "C:\\NexScale\\src\\app\\layout.tsx",
+      "source_location": "L37",
+      "id": "layout_rootlayout",
+      "community": 3,
+      "norm_label": "rootlayout()"
+    },
+    {
+      "label": "page.tsx",
+      "file_type": "code",
+      "source_file": "C:\\NexScale\\src\\app\\page.tsx",
+      "source_location": "L1",
+      "id": "c_nexscale_src_app_page_tsx",
+      "community": 4,
+      "norm_label": "page.tsx"
+    },
+    {
+      "label": "Home()",
+      "file_type": "code",
+      "source_file": "C:\\NexScale\\src\\app\\page.tsx",
+      "source_location": "L12",
+      "id": "page_home",
+      "community": 4,
+      "norm_label": "home()"
+    },
+    {
+      "label": "robots.ts",
+      "file_type": "code",
+      "source_file": "C:\\NexScale\\src\\app\\robots.ts",
+      "source_location": "L1",
+      "id": "c_nexscale_src_app_robots_ts",
+      "community": 5,
+      "norm_label": "robots.ts"
+    },
+    {
+      "label": "robots()",
+      "file_type": "code",
+      "source_file": "C:\\NexScale\\src\\app\\robots.ts",
+      "source_location": "L3",
+      "id": "robots_robots",
+      "community": 5,
+      "norm_label": "robots()"
+    },
+    {
+      "label": "sitemap.ts",
+      "file_type": "code",
+      "source_file": "C:\\NexScale\\src\\app\\sitemap.ts",
+      "source_location": "L1",
+      "id": "c_nexscale_src_app_sitemap_ts",
+      "community": 6,
+      "norm_label": "sitemap.ts"
+    },
+    {
+      "label": "sitemap()",
+      "file_type": "code",
+      "source_file": "C:\\NexScale\\src\\app\\sitemap.ts",
+      "source_location": "L3",
+      "id": "sitemap_sitemap",
+      "community": 6,
+      "norm_label": "sitemap()"
+    },
+    {
+      "label": "page.tsx",
+      "file_type": "code",
+      "source_file": "C:\\NexScale\\src\\app\\blog\\page.tsx",
+      "source_location": "L1",
+      "id": "c_nexscale_src_app_blog_page_tsx",
+      "community": 19,
+      "norm_label": "page.tsx"
+    },
+    {
+      "label": "page.tsx",
+      "file_type": "code",
+      "source_file": "C:\\NexScale\\src\\app\\blog\\[slug]\\page.tsx",
+      "source_location": "L1",
+      "id": "c_nexscale_src_app_blog_slug_page_tsx",
+      "community": 7,
+      "norm_label": "page.tsx"
+    },
+    {
+      "label": "generateStaticParams()",
+      "file_type": "code",
+      "source_file": "C:\\NexScale\\src\\app\\blog\\[slug]\\page.tsx",
+      "source_location": "L14",
+      "id": "page_generatestaticparams",
+      "community": 7,
+      "norm_label": "generatestaticparams()"
+    },
+    {
+      "label": "BlogPreview.tsx",
+      "file_type": "code",
+      "source_file": "C:\\NexScale\\src\\components\\BlogPreview.tsx",
+      "source_location": "L1",
+      "id": "c_nexscale_src_components_blogpreview_tsx",
+      "community": 8,
+      "norm_label": "blogpreview.tsx"
+    },
+    {
+      "label": "BlogPreview()",
+      "file_type": "code",
+      "source_file": "C:\\NexScale\\src\\components\\BlogPreview.tsx",
+      "source_location": "L9",
+      "id": "blogpreview_blogpreview",
+      "community": 8,
+      "norm_label": "blogpreview()"
+    },
+    {
+      "label": "ContactForm.tsx",
+      "file_type": "code",
+      "source_file": "C:\\NexScale\\src\\components\\ContactForm.tsx",
+      "source_location": "L1",
+      "id": "c_nexscale_src_components_contactform_tsx",
+      "community": 1,
+      "norm_label": "contactform.tsx"
+    },
+    {
+      "label": "handleChange()",
+      "file_type": "code",
+      "source_file": "C:\\NexScale\\src\\components\\ContactForm.tsx",
+      "source_location": "L21",
+      "id": "contactform_handlechange",
+      "community": 1,
+      "norm_label": "handlechange()"
+    },
+    {
+      "label": "handleSubmit()",
+      "file_type": "code",
+      "source_file": "C:\\NexScale\\src\\components\\ContactForm.tsx",
+      "source_location": "L26",
+      "id": "contactform_handlesubmit",
+      "community": 1,
+      "norm_label": "handlesubmit()"
+    },
+    {
+      "label": "Footer.tsx",
+      "file_type": "code",
+      "source_file": "C:\\NexScale\\src\\components\\Footer.tsx",
+      "source_location": "L1",
+      "id": "c_nexscale_src_components_footer_tsx",
+      "community": 0,
+      "norm_label": "footer.tsx"
+    },
+    {
+      "label": "LinkedinIcon()",
+      "file_type": "code",
+      "source_file": "C:\\NexScale\\src\\components\\Footer.tsx",
+      "source_location": "L5",
+      "id": "footer_linkedinicon",
+      "community": 0,
+      "norm_label": "linkedinicon()"
+    },
+    {
+      "label": "InstagramIcon()",
+      "file_type": "code",
+      "source_file": "C:\\NexScale\\src\\components\\Footer.tsx",
+      "source_location": "L13",
+      "id": "footer_instagramicon",
+      "community": 0,
+      "norm_label": "instagramicon()"
+    },
+    {
+      "label": "FacebookIcon()",
+      "file_type": "code",
+      "source_file": "C:\\NexScale\\src\\components\\Footer.tsx",
+      "source_location": "L21",
+      "id": "footer_facebookicon",
+      "community": 0,
+      "norm_label": "facebookicon()"
+    },
+    {
+      "label": "YoutubeIcon()",
+      "file_type": "code",
+      "source_file": "C:\\NexScale\\src\\components\\Footer.tsx",
+      "source_location": "L27",
+      "id": "footer_youtubeicon",
+      "community": 0,
+      "norm_label": "youtubeicon()"
+    },
+    {
+      "label": "Footer()",
+      "file_type": "code",
+      "source_file": "C:\\NexScale\\src\\components\\Footer.tsx",
+      "source_location": "L34",
+      "id": "footer_footer",
+      "community": 0,
+      "norm_label": "footer()"
+    },
+    {
+      "label": "Header.tsx",
+      "file_type": "code",
+      "source_file": "C:\\NexScale\\src\\components\\Header.tsx",
+      "source_location": "L1",
+      "id": "c_nexscale_src_components_header_tsx",
+      "community": 9,
+      "norm_label": "header.tsx"
+    },
+    {
+      "label": "handleScroll()",
+      "file_type": "code",
+      "source_file": "C:\\NexScale\\src\\components\\Header.tsx",
+      "source_location": "L14",
+      "id": "header_handlescroll",
+      "community": 9,
+      "norm_label": "handlescroll()"
+    },
+    {
+      "label": "Hero.tsx",
+      "file_type": "code",
+      "source_file": "C:\\NexScale\\src\\components\\Hero.tsx",
+      "source_location": "L1",
+      "id": "c_nexscale_src_components_hero_tsx",
+      "community": 20,
+      "norm_label": "hero.tsx"
+    },
+    {
+      "label": "InfoPanel.tsx",
+      "file_type": "code",
+      "source_file": "C:\\NexScale\\src\\components\\InfoPanel.tsx",
+      "source_location": "L1",
+      "id": "c_nexscale_src_components_infopanel_tsx",
+      "community": 21,
+      "norm_label": "infopanel.tsx"
+    },
+    {
+      "label": "MeetTeam.tsx",
+      "file_type": "code",
+      "source_file": "C:\\NexScale\\src\\components\\MeetTeam.tsx",
+      "source_location": "L1",
+      "id": "c_nexscale_src_components_meetteam_tsx",
+      "community": 2,
+      "norm_label": "meetteam.tsx"
+    },
+    {
+      "label": "LinkedinIcon()",
+      "file_type": "code",
+      "source_file": "C:\\NexScale\\src\\components\\MeetTeam.tsx",
+      "source_location": "L8",
+      "id": "meetteam_linkedinicon",
+      "community": 2,
+      "norm_label": "linkedinicon()"
+    },
+    {
+      "label": "getFeatureIcon()",
+      "file_type": "code",
+      "source_file": "C:\\NexScale\\src\\components\\MeetTeam.tsx",
+      "source_location": "L20",
+      "id": "meetteam_getfeatureicon",
+      "community": 2,
+      "norm_label": "getfeatureicon()"
+    },
+    {
+      "label": "Process.tsx",
+      "file_type": "code",
+      "source_file": "C:\\NexScale\\src\\components\\Process.tsx",
+      "source_location": "L1",
+      "id": "c_nexscale_src_components_process_tsx",
+      "community": 10,
+      "norm_label": "process.tsx"
+    },
+    {
+      "label": "Process()",
+      "file_type": "code",
+      "source_file": "C:\\NexScale\\src\\components\\Process.tsx",
+      "source_location": "L34",
+      "id": "process_process",
+      "community": 10,
+      "norm_label": "process()"
+    },
+    {
+      "label": "Projects.tsx",
+      "file_type": "code",
+      "source_file": "C:\\NexScale\\src\\components\\Projects.tsx",
+      "source_location": "L1",
+      "id": "c_nexscale_src_components_projects_tsx",
+      "community": 11,
+      "norm_label": "projects.tsx"
+    },
+    {
+      "label": "GithubIcon()",
+      "file_type": "code",
+      "source_file": "C:\\NexScale\\src\\components\\Projects.tsx",
+      "source_location": "L8",
+      "id": "projects_githubicon",
+      "community": 11,
+      "norm_label": "githubicon()"
+    },
+    {
+      "label": "Services.tsx",
+      "file_type": "code",
+      "source_file": "C:\\NexScale\\src\\components\\Services.tsx",
+      "source_location": "L1",
+      "id": "c_nexscale_src_components_services_tsx",
+      "community": 22,
+      "norm_label": "services.tsx"
+    },
+    {
+      "label": "SocialProof.tsx",
+      "file_type": "code",
+      "source_file": "C:\\NexScale\\src\\components\\SocialProof.tsx",
+      "source_location": "L1",
+      "id": "c_nexscale_src_components_socialproof_tsx",
+      "community": 12,
+      "norm_label": "socialproof.tsx"
+    },
+    {
+      "label": "SocialProof()",
+      "file_type": "code",
+      "source_file": "C:\\NexScale\\src\\components\\SocialProof.tsx",
+      "source_location": "L16",
+      "id": "socialproof_socialproof",
+      "community": 12,
+      "norm_label": "socialproof()"
+    },
+    {
+      "label": "Testimonials.tsx",
+      "file_type": "code",
+      "source_file": "C:\\NexScale\\src\\components\\Testimonials.tsx",
+      "source_location": "L1",
+      "id": "c_nexscale_src_components_testimonials_tsx",
+      "community": 23,
+      "norm_label": "testimonials.tsx"
+    },
+    {
+      "label": "WhyChooseUs.tsx",
+      "file_type": "code",
+      "source_file": "C:\\NexScale\\src\\components\\WhyChooseUs.tsx",
+      "source_location": "L1",
+      "id": "c_nexscale_src_components_whychooseus_tsx",
+      "community": 13,
+      "norm_label": "whychooseus.tsx"
+    },
+    {
+      "label": "WhyChooseUs()",
+      "file_type": "code",
+      "source_file": "C:\\NexScale\\src\\components\\WhyChooseUs.tsx",
+      "source_location": "L31",
+      "id": "whychooseus_whychooseus",
+      "community": 13,
+      "norm_label": "whychooseus()"
+    },
+    {
+      "label": "siteConfig.ts",
+      "file_type": "code",
+      "source_file": "C:\\NexScale\\src\\config\\siteConfig.ts",
+      "source_location": "L1",
+      "id": "c_nexscale_src_config_siteconfig_ts",
+      "community": 14,
+      "norm_label": "siteconfig.ts"
+    },
+    {
+      "label": "getDirectImageUrl()",
+      "file_type": "code",
+      "source_file": "C:\\NexScale\\src\\config\\siteConfig.ts",
+      "source_location": "L4",
+      "id": "siteconfig_getdirectimageurl",
+      "community": 14,
+      "norm_label": "getdirectimageurl()"
+    },
+    {
+      "label": "blog.ts",
+      "file_type": "code",
+      "source_file": "C:\\NexScale\\src\\data\\blog.ts",
+      "source_location": "L1",
+      "id": "c_nexscale_src_data_blog_ts",
+      "community": 24,
+      "norm_label": "blog.ts"
+    },
+    {
+      "label": "projects.ts",
+      "file_type": "code",
+      "source_file": "C:\\NexScale\\src\\data\\projects.ts",
+      "source_location": "L1",
+      "id": "c_nexscale_src_data_projects_ts",
+      "community": 25,
+      "norm_label": "projects.ts"
+    },
+    {
+      "label": "testimonials.ts",
+      "file_type": "code",
+      "source_file": "C:\\NexScale\\src\\data\\testimonials.ts",
+      "source_location": "L1",
+      "id": "c_nexscale_src_data_testimonials_ts",
+      "community": 26,
+      "norm_label": "testimonials.ts"
+    }
+  ],
+  "links": [
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "C:\\NexScale\\src\\app\\layout.tsx",
+      "source_location": "L37",
+      "weight": 1.0,
+      "_src": "c_nexscale_src_app_layout_tsx",
+      "_tgt": "layout_rootlayout",
+      "source": "c_nexscale_src_app_layout_tsx",
+      "target": "layout_rootlayout",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "C:\\NexScale\\src\\app\\page.tsx",
+      "source_location": "L12",
+      "weight": 1.0,
+      "_src": "c_nexscale_src_app_page_tsx",
+      "_tgt": "page_home",
+      "source": "c_nexscale_src_app_page_tsx",
+      "target": "page_home",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "C:\\NexScale\\src\\app\\robots.ts",
+      "source_location": "L3",
+      "weight": 1.0,
+      "_src": "c_nexscale_src_app_robots_ts",
+      "_tgt": "robots_robots",
+      "source": "c_nexscale_src_app_robots_ts",
+      "target": "robots_robots",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "C:\\NexScale\\src\\app\\sitemap.ts",
+      "source_location": "L3",
+      "weight": 1.0,
+      "_src": "c_nexscale_src_app_sitemap_ts",
+      "_tgt": "sitemap_sitemap",
+      "source": "c_nexscale_src_app_sitemap_ts",
+      "target": "sitemap_sitemap",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "C:\\NexScale\\src\\app\\blog\\[slug]\\page.tsx",
+      "source_location": "L14",
+      "weight": 1.0,
+      "_src": "c_nexscale_src_app_blog_slug_page_tsx",
+      "_tgt": "page_generatestaticparams",
+      "source": "c_nexscale_src_app_blog_slug_page_tsx",
+      "target": "page_generatestaticparams",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "C:\\NexScale\\src\\components\\BlogPreview.tsx",
+      "source_location": "L9",
+      "weight": 1.0,
+      "_src": "c_nexscale_src_components_blogpreview_tsx",
+      "_tgt": "blogpreview_blogpreview",
+      "source": "c_nexscale_src_components_blogpreview_tsx",
+      "target": "blogpreview_blogpreview",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "C:\\NexScale\\src\\components\\ContactForm.tsx",
+      "source_location": "L21",
+      "weight": 1.0,
+      "_src": "c_nexscale_src_components_contactform_tsx",
+      "_tgt": "contactform_handlechange",
+      "source": "c_nexscale_src_components_contactform_tsx",
+      "target": "contactform_handlechange",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "C:\\NexScale\\src\\components\\ContactForm.tsx",
+      "source_location": "L26",
+      "weight": 1.0,
+      "_src": "c_nexscale_src_components_contactform_tsx",
+      "_tgt": "contactform_handlesubmit",
+      "source": "c_nexscale_src_components_contactform_tsx",
+      "target": "contactform_handlesubmit",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "C:\\NexScale\\src\\components\\Footer.tsx",
+      "source_location": "L5",
+      "weight": 1.0,
+      "_src": "c_nexscale_src_components_footer_tsx",
+      "_tgt": "footer_linkedinicon",
+      "source": "c_nexscale_src_components_footer_tsx",
+      "target": "footer_linkedinicon",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "C:\\NexScale\\src\\components\\Footer.tsx",
+      "source_location": "L13",
+      "weight": 1.0,
+      "_src": "c_nexscale_src_components_footer_tsx",
+      "_tgt": "footer_instagramicon",
+      "source": "c_nexscale_src_components_footer_tsx",
+      "target": "footer_instagramicon",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "C:\\NexScale\\src\\components\\Footer.tsx",
+      "source_location": "L21",
+      "weight": 1.0,
+      "_src": "c_nexscale_src_components_footer_tsx",
+      "_tgt": "footer_facebookicon",
+      "source": "c_nexscale_src_components_footer_tsx",
+      "target": "footer_facebookicon",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "C:\\NexScale\\src\\components\\Footer.tsx",
+      "source_location": "L27",
+      "weight": 1.0,
+      "_src": "c_nexscale_src_components_footer_tsx",
+      "_tgt": "footer_youtubeicon",
+      "source": "c_nexscale_src_components_footer_tsx",
+      "target": "footer_youtubeicon",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "C:\\NexScale\\src\\components\\Footer.tsx",
+      "source_location": "L34",
+      "weight": 1.0,
+      "_src": "c_nexscale_src_components_footer_tsx",
+      "_tgt": "footer_footer",
+      "source": "c_nexscale_src_components_footer_tsx",
+      "target": "footer_footer",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "C:\\NexScale\\src\\components\\Header.tsx",
+      "source_location": "L14",
+      "weight": 1.0,
+      "_src": "c_nexscale_src_components_header_tsx",
+      "_tgt": "header_handlescroll",
+      "source": "c_nexscale_src_components_header_tsx",
+      "target": "header_handlescroll",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "C:\\NexScale\\src\\components\\MeetTeam.tsx",
+      "source_location": "L8",
+      "weight": 1.0,
+      "_src": "c_nexscale_src_components_meetteam_tsx",
+      "_tgt": "meetteam_linkedinicon",
+      "source": "c_nexscale_src_components_meetteam_tsx",
+      "target": "meetteam_linkedinicon",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "C:\\NexScale\\src\\components\\MeetTeam.tsx",
+      "source_location": "L20",
+      "weight": 1.0,
+      "_src": "c_nexscale_src_components_meetteam_tsx",
+      "_tgt": "meetteam_getfeatureicon",
+      "source": "c_nexscale_src_components_meetteam_tsx",
+      "target": "meetteam_getfeatureicon",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "C:\\NexScale\\src\\components\\Process.tsx",
+      "source_location": "L34",
+      "weight": 1.0,
+      "_src": "c_nexscale_src_components_process_tsx",
+      "_tgt": "process_process",
+      "source": "c_nexscale_src_components_process_tsx",
+      "target": "process_process",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "C:\\NexScale\\src\\components\\Projects.tsx",
+      "source_location": "L8",
+      "weight": 1.0,
+      "_src": "c_nexscale_src_components_projects_tsx",
+      "_tgt": "projects_githubicon",
+      "source": "c_nexscale_src_components_projects_tsx",
+      "target": "projects_githubicon",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "C:\\NexScale\\src\\components\\SocialProof.tsx",
+      "source_location": "L16",
+      "weight": 1.0,
+      "_src": "c_nexscale_src_components_socialproof_tsx",
+      "_tgt": "socialproof_socialproof",
+      "source": "c_nexscale_src_components_socialproof_tsx",
+      "target": "socialproof_socialproof",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "C:\\NexScale\\src\\components\\WhyChooseUs.tsx",
+      "source_location": "L31",
+      "weight": 1.0,
+      "_src": "c_nexscale_src_components_whychooseus_tsx",
+      "_tgt": "whychooseus_whychooseus",
+      "source": "c_nexscale_src_components_whychooseus_tsx",
+      "target": "whychooseus_whychooseus",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "C:\\NexScale\\src\\config\\siteConfig.ts",
+      "source_location": "L4",
+      "weight": 1.0,
+      "_src": "c_nexscale_src_config_siteconfig_ts",
+      "_tgt": "siteconfig_getdirectimageurl",
+      "source": "c_nexscale_src_config_siteconfig_ts",
+      "target": "siteconfig_getdirectimageurl",
+      "confidence_score": 1.0
+    }
+  ],
+  "hyperedges": []
+}

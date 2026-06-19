@@ -4,6 +4,7 @@ import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import { Menu, X, ArrowRight } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
+import { siteConfig } from "../config/siteConfig";
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
@@ -26,6 +27,7 @@ export default function Header() {
     { name: "Why NexScale", href: "#why-choose-us" },
     { name: "Projects", href: "#projects" },
     { name: "Process", href: "#process" },
+    { name: "Team", href: "#team" },
   ];
 
   return (
@@ -41,9 +43,9 @@ export default function Header() {
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2 group">
             <span className="text-2xl font-bold tracking-tight text-white flex items-center">
-              Nex
+              {siteConfig.logo.prefix}
               <span className="bg-gradient-to-r from-violet-400 to-emerald-400 bg-clip-text text-transparent group-hover:from-violet-300 group-hover:to-emerald-300 transition-colors">
-                Scale
+                {siteConfig.logo.suffix}
               </span>
             </span>
           </Link>
@@ -64,10 +66,10 @@ export default function Header() {
           {/* Action CTA */}
           <div className="hidden md:flex items-center gap-4">
             <a
-              href="#contact"
+              href={siteConfig.ctas.primary.href}
               className="inline-flex items-center gap-1.5 px-4 py-2 rounded-full text-xs font-semibold bg-white text-gray-950 hover:bg-gray-100 transition-all shadow-lg hover:shadow-white/5"
             >
-              Book a Consultation
+              {siteConfig.ctas.primary.text}
               <ArrowRight className="w-3.5 h-3.5" />
             </a>
           </div>
@@ -109,11 +111,11 @@ export default function Header() {
               ))}
               <div className="pt-2 px-3">
                 <a
-                  href="#contact"
+                  href={siteConfig.ctas.primary.href}
                   onClick={() => setIsOpen(false)}
                   className="w-full inline-flex items-center justify-center gap-2 px-4 py-3 rounded-full text-sm font-semibold bg-white text-gray-950 hover:bg-gray-100 transition-all shadow-lg"
                 >
-                  Book a Consultation
+                  {siteConfig.ctas.primary.text}
                   <ArrowRight className="w-4 h-4" />
                 </a>
               </div>

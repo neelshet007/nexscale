@@ -3,18 +3,11 @@
 import React from "react";
 import { ArrowRight, ChevronRight } from "lucide-react";
 import { motion } from "framer-motion";
-
-// Configurable core technologies
-const techStack = [
-  { name: "Next.js", desc: "Web Development" },
-  { name: "Python", desc: "Algo Engineering" },
-  { name: "FastAPI", desc: "REST Architectures" },
-  { name: "Docker", desc: "Container Deployments" },
-  { name: "MongoDB", desc: "Data Storage" },
-  { name: "VPS Cloud", desc: "Hosting & Scaling" },
-];
+import { siteConfig } from "../config/siteConfig";
 
 export default function Hero() {
+  const techStack = siteConfig.technicalExpertise;
+
   return (
     <section className="relative min-h-screen flex items-center justify-center pt-28 pb-16 overflow-hidden bg-grid-pattern">
       {/* Absolute background gradient glows */}
@@ -31,7 +24,7 @@ export default function Hero() {
             className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full border border-violet-500/20 bg-violet-950/20 text-xs font-semibold text-violet-300 mb-8"
           >
             <span className="flex h-2 w-2 rounded-full bg-violet-400 animate-pulse" />
-            NexScale — Helping Businesses Scale Through Technology
+            {siteConfig.companyName} — {siteConfig.tagline}
           </motion.div>
 
           {/* Main Headline */}
@@ -65,17 +58,17 @@ export default function Hero() {
             className="mt-10 flex flex-col sm:flex-row items-center gap-4 w-full justify-center"
           >
             <a
-              href="#contact"
+              href={siteConfig.ctas.primary.href}
               className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-4 rounded-full text-sm font-semibold bg-white text-gray-950 hover:bg-gray-100 transition-all shadow-xl shadow-white/5 active:scale-98"
             >
-              Book a Consultation
+              {siteConfig.ctas.primary.text}
               <ArrowRight className="w-4 h-4" />
             </a>
             <a
-              href="#services"
+              href={siteConfig.ctas.secondary.href}
               className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-4 rounded-full text-sm font-semibold bg-gray-900 border border-white/8 text-gray-300 hover:text-white hover:bg-gray-900/60 hover:border-white/15 transition-all active:scale-98"
             >
-              View Services
+              {siteConfig.ctas.secondary.text}
               <ChevronRight className="w-4 h-4" />
             </a>
           </motion.div>
@@ -89,17 +82,17 @@ export default function Hero() {
           >
             <div className="p-8 rounded-2xl glass-panel relative overflow-hidden">
               <div className="absolute inset-0 bg-gradient-to-r from-violet-500/5 to-emerald-500/5 pointer-events-none" />
-              <div className="text-xs font-bold uppercase tracking-widest text-violet-400 mb-6">Our Core Technology Competencies</div>
-              <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
+              <div className="text-xs font-bold uppercase tracking-widest text-violet-400 mb-6">Technical Expertise</div>
+              <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
                 {techStack.map((tech) => (
                   <div
                     key={tech.name}
                     className="flex flex-col items-center justify-center text-center p-4 rounded-xl bg-white/5 border border-white/5 hover:border-violet-500/30 transition-all duration-300"
                   >
-                    <span className="text-lg font-bold text-white tracking-tight">
+                    <span className="text-sm font-bold text-white tracking-tight leading-snug">
                       {tech.name}
                     </span>
-                    <span className="mt-1.5 text-[10px] font-medium text-gray-400 uppercase tracking-wider">
+                    <span className="mt-1.5 text-[9px] font-medium text-gray-400 uppercase tracking-wider">
                       {tech.desc}
                     </span>
                   </div>
