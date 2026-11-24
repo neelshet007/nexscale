@@ -32,7 +32,16 @@ const YoutubeIcon = () => (
 );
 
 export default function Footer() {
-  const currentYear = new Date().getFullYear();
+  const currentYear = 2026;
+
+  const quickLinks = [
+    { name: "Services", href: "#services" },
+    { name: "Why NexScale", href: "#why-nexscale" },
+    { name: "Projects", href: "#projects" },
+    { name: "Process", href: "#process" },
+    { name: "Team", href: "#team" },
+    { name: "Contact", href: "#contact" },
+  ];
 
   const socialLinks = [
     { name: "LinkedIn", icon: LinkedinIcon, href: siteConfig.socialLinks.linkedin },
@@ -43,53 +52,76 @@ export default function Footer() {
   ];
 
   return (
-    <footer className="bg-gray-950 border-t border-white/5 py-12 md:py-16">
+    <footer className="bg-gray-950 border-t border-white/5 py-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8 md:gap-12">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-8 md:gap-12 pb-12 border-b border-white/5">
           {/* Logo and Brand */}
           <div className="md:col-span-2">
-            <span className="text-xl font-bold tracking-tight text-white flex items-center mb-4">
-              {siteConfig.logo.prefix}
-              <span className="bg-gradient-to-r from-violet-400 to-emerald-400 bg-clip-text text-transparent">
-                {siteConfig.logo.suffix}
+            <Link href="/" className="inline-flex items-center gap-2 group mb-4">
+              <span className="text-2xl font-bold tracking-tight text-white flex items-center">
+                {siteConfig.logo.prefix}
+                <span className="bg-gradient-to-r from-violet-400 to-emerald-400 bg-clip-text text-transparent group-hover:from-violet-300 group-hover:to-emerald-300 transition-colors">
+                  {siteConfig.logo.suffix}
+                </span>
               </span>
-            </span>
+            </Link>
+            <p className="text-xs font-semibold uppercase tracking-wider text-emerald-400 mb-2">
+              {siteConfig.tagline}
+            </p>
             <p className="text-sm text-gray-400 max-w-sm leading-relaxed">
-              {siteConfig.tagline}. We build reliable websites, automate operations, retain customers, and build algorithmic trading solutions.
+              We build custom software, connect business operations, automate workflows, and engineer reliable digital infrastructure.
             </p>
           </div>
 
           {/* Quick Links */}
           <div>
-            <h3 className="text-sm font-semibold text-white uppercase tracking-wider mb-4">Quick Links</h3>
-            <ul className="space-y-3">
-              <li>
-                <a href="#services" className="text-sm text-gray-400 hover:text-white transition-colors">
-                  Services
-                </a>
-              </li>
-              <li>
-                <a href="#projects" className="text-sm text-gray-400 hover:text-white transition-colors">
-                  Projects
-                </a>
-              </li>
-              <li>
-                <a href="#team" className="text-sm text-gray-400 hover:text-white transition-colors">
-                  Team
-                </a>
-              </li>
-              <li>
-                <a href="#contact" className="text-sm text-gray-400 hover:text-white transition-colors">
-                  Contact
-                </a>
-              </li>
+            <h3 className="text-xs font-bold text-white uppercase tracking-wider mb-4">Quick Links</h3>
+            <ul className="space-y-2.5">
+              {quickLinks.map((link) => (
+                <li key={link.name}>
+                  <a
+                    href={link.href}
+                    className="text-sm text-gray-400 hover:text-white transition-colors"
+                  >
+                    {link.name}
+                  </a>
+                </li>
+              ))}
             </ul>
           </div>
 
-          {/* Social Links */}
+          {/* Contact Details */}
           <div>
-            <h3 className="text-sm font-semibold text-white uppercase tracking-wider mb-4">Connect With Us</h3>
-            <div className="flex gap-4">
+            <h3 className="text-xs font-bold text-white uppercase tracking-wider mb-4">Contact</h3>
+            <div className="space-y-2 text-sm text-gray-400 leading-relaxed">
+              <p>
+                <span className="text-gray-400">Email:</span>{" "}
+                <a
+                  href={`mailto:${siteConfig.contact.email}`}
+                  className="text-gray-300 hover:text-white transition-colors"
+                >
+                  {siteConfig.contact.email}
+                </a>
+              </p>
+              <p>
+                <span className="text-gray-400">Phone:</span>{" "}
+                <a
+                  href={`https://wa.me/${siteConfig.contact.whatsappNumber}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-gray-300 hover:text-white transition-colors"
+                >
+                  {siteConfig.contact.phone}
+                </a>
+              </p>
+              <p>
+                <span className="text-gray-400">Location:</span>{" "}
+                <span className="text-gray-300">{siteConfig.contact.location}</span>
+              </p>
+            </div>
+
+            {/* Social Icons */}
+            <div className="flex gap-3 mt-6">
               {socialLinks.map((social) => {
                 const Icon = social.icon;
                 return (
@@ -98,10 +130,10 @@ export default function Footer() {
                     href={social.href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="p-2 rounded-full bg-gray-900 border border-white/5 text-gray-400 hover:text-white hover:border-violet-500/40 hover:bg-gray-900/80 transition-all"
+                    className="p-2 rounded-xl bg-gray-900 border border-white/5 text-gray-400 hover:text-white hover:border-violet-500/30 transition-all"
                     aria-label={social.name}
                   >
-                    <Icon className="w-4 h-4" />
+                    <Icon />
                   </a>
                 );
               })}
@@ -109,15 +141,13 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="mt-12 pt-8 border-t border-white/5 flex flex-col md:flex-row items-center justify-between gap-4">
-          <p className="text-xs text-gray-500">&copy; {currentYear} NexScale. All rights reserved.</p>
-          <div className="flex gap-6">
-            <Link href="/privacy" className="text-xs text-gray-500 hover:text-gray-400">
-              Privacy Policy
-            </Link>
-            <Link href="/terms" className="text-xs text-gray-500 hover:text-gray-400">
-              Terms of Service
-            </Link>
+        {/* Bottom Bar */}
+        <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-gray-400 font-mono">
+          <p>Copyright © {currentYear} {siteConfig.companyName}. All rights reserved.</p>
+          <div className="flex items-center gap-4">
+            <span>Dadar, Mumbai</span>
+            <span>•</span>
+            <span>{siteConfig.secondaryTagline}</span>
           </div>
         </div>
       </div>

@@ -13,15 +13,17 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "NexScale | Website Development, Automation & AI Solutions",
-  description: "NexScale helps businesses scale through website development, business automation, customer retention systems, AI solutions, trading technology, and digital transformation services.",
+  title: "NexScale | Helping Businesses Scale Through Technology",
+  description:
+    "NexScale engineers custom software, integrated business systems, automation, APIs, cloud infrastructure, and DevOps to help businesses operate smarter and scale.",
   metadataBase: new URL("https://nexscale.com"),
   alternates: {
     canonical: "https://nexscale.com",
   },
   openGraph: {
-    title: "NexScale | Website Development, Automation & AI Solutions",
-    description: "NexScale helps businesses scale through website development, business automation, customer retention systems, AI solutions, trading technology, and digital transformation services.",
+    title: "NexScale | Helping Businesses Scale Through Technology",
+    description:
+      "Custom software development, business management systems (ERP, CRM, HRM), workflow automation, APIs, and cloud infrastructure.",
     url: "https://nexscale.com",
     siteName: "NexScale",
     locale: "en_US",
@@ -29,8 +31,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "NexScale | Website Development, Automation & AI Solutions",
-    description: "NexScale helps businesses scale through website development, business automation, customer retention systems, AI solutions, trading technology, and digital transformation services.",
+    title: "NexScale | Helping Businesses Scale Through Technology",
+    description:
+      "Custom software development, business management systems, workflow automation, APIs, and cloud infrastructure.",
   },
 };
 
@@ -39,15 +42,17 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  // Structured Data (JSON-LD) for LocalBusiness
+  // Structured Data (JSON-LD) for LocalBusiness / ProfessionalService
   const structuredData = {
     "@context": "https://schema.org",
     "@type": "ProfessionalService",
     "name": "NexScale",
     "image": "https://nexscale.com/og-image.jpg",
-    "description": "Premium technology agency specializing in custom software development, website development, business automation, and trading systems for businesses in India.",
+    "description":
+      "Technology solutions and custom software engineering company specializing in business management systems, web applications, workflow automation, APIs, and cloud infrastructure.",
     "url": "https://nexscale.com",
     "telephone": "+917709215976",
+    "email": "nexscale7@gmail.com",
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "Dadar",
@@ -56,33 +61,6 @@ export default function RootLayout({
       "postalCode": "400014",
       "addressCountry": "IN"
     },
-    "geo": {
-      "@type": "GeoCoordinates",
-      "latitude": "19.0178",
-      "longitude": "72.8478"
-    },
-    "areaServed": [
-      {
-        "@type": "AdministrativeArea",
-        "name": "Mahad"
-      },
-      {
-        "@type": "AdministrativeArea",
-        "name": "Raigad"
-      },
-      {
-        "@type": "AdministrativeArea",
-        "name": "Maharashtra"
-      },
-      {
-        "@type": "AdministrativeArea",
-        "name": "Mumbai"
-      },
-      {
-        "@type": "AdministrativeArea",
-        "name": "India"
-      }
-    ],
     "sameAs": [
       "https://linkedin.com/company/nexscale",
       "https://www.instagram.com/nexscale77",
@@ -101,8 +79,21 @@ export default function RootLayout({
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
         />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              if (typeof window !== 'undefined' && 'serviceWorker' in navigator) {
+                navigator.serviceWorker.getRegistrations().then(function(registrations) {
+                  for (var registration of registrations) {
+                    registration.unregister();
+                  }
+                });
+              }
+            `,
+          }}
+        />
       </head>
-      <body className="min-h-full flex flex-col bg-gray-950 text-gray-100 selection:bg-violet-600/30 selection:text-white">
+      <body className="min-h-full flex flex-col font-sans bg-[#030712] text-[#f3f4f6] antialiased">
         {children}
       </body>
     </html>
