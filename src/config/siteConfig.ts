@@ -54,9 +54,9 @@ export const siteConfig = {
     heading: "Let's Build the Right Solution for Your Business.",
     subheading:
       "Tell us about your business, your operational challenges, or your technology requirements. Let's explore how NexScale can help.",
-    email: "nexscale7@gmail.com",
-    phone: "+91 7709215976",
-    whatsappNumber: "917709215976", // Country code prefix + number (no +, spaces, or dashes)
+    email: "neelshet@teamnexscale.com",
+    phone: "+91 9356626189",
+    whatsappNumber: "919356626189", // Country code prefix + number (no +, spaces, or dashes)
     location: "Dadar, Mumbai, India",
     address: "Dadar, Mumbai, Maharashtra 400014, India",
     googleMapsLink: "https://maps.google.com/?q=Dadar,+Mumbai",
@@ -66,7 +66,7 @@ export const siteConfig = {
     instagram: "https://www.instagram.com/nexscale77",
     facebook: "https://www.facebook.com/share/1jfjBviydp/",
     youtube: "https://youtube.com/@nexscale77",
-    whatsapp: "https://wa.me/917709215976",
+    whatsapp: "https://wa.me/919356626189",
     github: "https://github.com/nexscale",
   },
   ctas: {
@@ -319,7 +319,7 @@ export const siteConfig = {
       ],
       socials: {
         linkedin: "https://www.linkedin.com/neelsheth2007",
-        email: "mailto:nexscale7@gmail.com"
+        email: "mailto:neelshet@teamnexscale.com"
       }
     },
     {
@@ -346,8 +346,8 @@ export const siteConfig = {
         "Partnerships"
       ],
       socials: {
-        linkedin: "https://www.linkedin.com/in/harsh-shet",
-        email: "mailto:nexscale7@gmail.com"
+        linkedin: "https://www.linkedin.com/in/harsh-shet-7844a2205/",
+        email: "mailto:harshshet@teamnexscale.com"
       }
     }
   ],

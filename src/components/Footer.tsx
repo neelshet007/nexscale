@@ -57,18 +57,18 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 md:gap-12 pb-12 border-b border-white/5">
           {/* Logo and Brand */}
           <div className="md:col-span-2">
-            <Link href="/" className="inline-flex items-center gap-2 group mb-4">
-              <span className="text-2xl font-bold tracking-tight text-white flex items-center">
+            <Link href="/" className="inline-flex flex-col group mb-3 focus:outline-none">
+              <span className="text-2xl font-bold tracking-tight text-white flex items-center leading-none">
                 {siteConfig.logo.prefix}
                 <span className="bg-gradient-to-r from-violet-400 to-emerald-400 bg-clip-text text-transparent group-hover:from-violet-300 group-hover:to-emerald-300 transition-colors">
                   {siteConfig.logo.suffix}
                 </span>
               </span>
+              <span className="text-xs font-semibold text-emerald-400 tracking-wide mt-1.5">
+                {siteConfig.secondaryTagline}
+              </span>
             </Link>
-            <p className="text-xs font-semibold uppercase tracking-wider text-emerald-400 mb-2">
-              {siteConfig.tagline}
-            </p>
-            <p className="text-sm text-gray-400 max-w-sm leading-relaxed">
+            <p className="text-sm text-gray-400 max-w-sm leading-relaxed mt-2">
               We build custom software, connect business operations, automate workflows, and engineer reliable digital infrastructure.
             </p>
           </div>

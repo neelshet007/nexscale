@@ -7,6 +7,6 @@ export default function robots(): MetadataRoute.Robots {
       allow: "/",
       disallow: "/private/",
     },
-    sitemap: "https://nexscale.com/sitemap.xml",
+    sitemap: "https://www.teamnexscale.com/sitemap.xml",
   };
 }

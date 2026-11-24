@@ -34,19 +34,22 @@ export default function Header() {
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         scrolled
-          ? "bg-gray-950/80 backdrop-blur-md border-b border-white/8 py-3"
-          : "bg-transparent py-5"
+          ? "bg-gray-950/85 backdrop-blur-md border-b border-white/8 py-3"
+          : "bg-transparent py-4 sm:py-5"
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between">
-          {/* Authentic Logo */}
-          <Link href="/" className="flex items-center gap-2 group">
-            <span className="text-2xl font-bold tracking-tight text-white flex items-center">
+          {/* Authentic Logo with Tagline Below */}
+          <Link href="/" className="flex flex-col group focus:outline-none" aria-label="NexScale Home">
+            <span className="text-2xl font-bold tracking-tight text-white flex items-center leading-none">
               {siteConfig.logo.prefix}
               <span className="bg-gradient-to-r from-violet-400 to-emerald-400 bg-clip-text text-transparent group-hover:from-violet-300 group-hover:to-emerald-300 transition-colors">
                 {siteConfig.logo.suffix}
               </span>
+            </span>
+            <span className="text-[10px] font-medium tracking-tight text-gray-400 group-hover:text-emerald-300 transition-colors mt-1">
+              {siteConfig.secondaryTagline}
             </span>
           </Link>
 
@@ -67,9 +70,9 @@ export default function Header() {
           <div className="hidden md:flex items-center gap-4">
             <a
               href={siteConfig.ctas.primary.href}
-              className="inline-flex items-center gap-1.5 px-4 py-2 rounded-full text-xs font-semibold bg-white text-gray-950 hover:bg-gray-100 transition-all shadow-lg hover:shadow-white/5 active:scale-98"
+              className="inline-flex items-center gap-1.5 px-5 py-2 rounded-full text-xs font-semibold bg-white text-gray-950 hover:bg-gray-100 transition-all shadow-lg hover:shadow-white/5 active:scale-98"
             >
-              {siteConfig.ctas.primary.text}
+              <span>{siteConfig.ctas.primary.text}</span>
               <ArrowRight className="w-3.5 h-3.5" />
             </a>
           </div>
@@ -114,7 +117,7 @@ export default function Header() {
                   onClick={() => setIsOpen(false)}
                   className="w-full inline-flex items-center justify-center gap-1.5 px-4 py-2.5 rounded-full text-xs font-semibold bg-white text-gray-950 hover:bg-gray-100 transition-all shadow-md"
                 >
-                  {siteConfig.ctas.primary.text}
+                  <span>{siteConfig.ctas.primary.text}</span>
                   <ArrowRight className="w-3.5 h-3.5" />
                 </a>
               </div>
