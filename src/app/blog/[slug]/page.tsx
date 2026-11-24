@@ -1,4 +1,5 @@
 import React from "react";
+import type { Metadata } from "next";
 import Header from "../../../components/Header";
 import Footer from "../../../components/Footer";
 import { blogPostsData } from "../../../data/blog";
@@ -8,6 +9,43 @@ import { notFound } from "next/navigation";
 
 interface PageProps {
   params: Promise<{ slug: string }>;
+}
+
+// Dynamic SEO metadata for each article when indexed by Google and shared on social
+export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
+  const { slug } = await params;
+  const post = blogPostsData.find((p) => p.slug === slug);
+  if (!post) return {};
+
+  return {
+    title: `${post.title} | NexScale`,
+    description: post.excerpt,
+    alternates: {
+      canonical: `https://www.teamnexscale.com/blog/${post.slug}`,
+    },
+    openGraph: {
+      title: post.title,
+      description: post.excerpt,
+      url: `https://www.teamnexscale.com/blog/${post.slug}`,
+      type: "article",
+      publishedTime: post.date,
+      authors: [post.author],
+      images: [
+        {
+          url: "https://www.teamnexscale.com/og-image.png",
+          width: 1200,
+          height: 630,
+          alt: post.title,
+        },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: post.title,
+      description: post.excerpt,
+      images: ["https://www.teamnexscale.com/og-image.png"],
+    },
+  };
 }
 
 // Statically generate parameters at build time for optimal Vercel deployment performance

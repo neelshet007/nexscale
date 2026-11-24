@@ -69,9 +69,10 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "/icon.svg",
+        url: "https://www.teamnexscale.com/og-image.png",
         width: 1200,
         height: 630,
+        type: "image/png",
         alt: "NexScale — Built on Trust. Driven by Technology.",
       },
     ],
@@ -81,7 +82,7 @@ export const metadata: Metadata = {
     title: "NexScale — Custom Software Engineering & Technology Consulting",
     description:
       "Custom software development, business management systems, workflow automation, APIs, and cloud infrastructure. Built on Trust. Driven by Technology.",
-    images: ["/icon.svg"],
+    images: ["https://www.teamnexscale.com/og-image.png"],
   },
 };
 
@@ -123,7 +124,7 @@ export default function RootLayout({
         "@id": "https://www.teamnexscale.com/#service",
         "name": "NexScale Technology Consulting",
         "url": "https://www.teamnexscale.com",
-        "image": "https://www.teamnexscale.com/icon.svg",
+        "image": "https://www.teamnexscale.com/og-image.png",
         "telephone": "+919356626189",
         "priceRange": "$$",
         "address": {
@@ -204,6 +205,7 @@ export default function RootLayout({
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased dark`}
     >
       <head>
+        <meta name="theme-color" content="#030712" />
         <link rel="icon" href="/icon.svg" type="image/svg+xml" sizes="any" />
         <link rel="apple-touch-icon" href="/icon.svg" />
         <script
