@@ -62,7 +62,7 @@ export const siteConfig = {
     googleMapsLink: "https://maps.google.com/?q=Dadar,+Mumbai",
   },
   socialLinks: {
-    linkedin: "https://linkedin.com/company/nexscale",
+    linkedin: "https://www.linkedin.com/company/nexscale7",
     instagram: "https://www.instagram.com/nexscale77",
     facebook: "https://www.facebook.com/share/1jfjBviydp/",
     youtube: "https://youtube.com/@nexscale77",

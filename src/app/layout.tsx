@@ -105,7 +105,7 @@ export default function RootLayout({
         "telephone": "+919356626189",
         "email": "neelshet@teamnexscale.com",
         "sameAs": [
-          "https://linkedin.com/company/nexscale",
+          "https://www.linkedin.com/company/nexscale7",
           "https://www.instagram.com/nexscale77",
           "https://www.facebook.com/share/1jfjBviydp/",
           "https://youtube.com/@nexscale77"
