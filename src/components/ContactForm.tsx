@@ -17,7 +17,7 @@ export default function ContactForm() {
   const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
   const [errorMessage, setErrorMessage] = useState("");
 
-  // Listen to hash changes without triggering set-state-in-effect
+  // Listen to hash changes and custom autofill events without triggering set-state-in-effect
   useEffect(() => {
     const handleHashChange = () => {
       const hash = window.location.hash;
@@ -32,11 +32,30 @@ export default function ContactForm() {
       }
     };
 
+    const handleAutofill = (e: Event) => {
+      const ce = e as CustomEvent<{ service?: string; requirements?: string }>;
+      if (ce.detail) {
+        setFormData((prev) => ({
+          ...prev,
+          service: ce.detail.service || prev.service,
+          requirements: ce.detail.requirements || prev.requirements,
+        }));
+        setTimeout(() => {
+          const nameInput = document.getElementById("name") as HTMLInputElement | null;
+          if (nameInput) {
+            nameInput.focus();
+          }
+        }, 150);
+      }
+    };
+
     const frameId = requestAnimationFrame(handleHashChange);
     window.addEventListener("hashchange", handleHashChange);
+    window.addEventListener("nexscale:autofill-service", handleAutofill);
     return () => {
       cancelAnimationFrame(frameId);
       window.removeEventListener("hashchange", handleHashChange);
+      window.removeEventListener("nexscale:autofill-service", handleAutofill);
     };
   }, []);
 
@@ -100,10 +119,15 @@ Sent via NexScale consultation portal (teamnexscale.com).`;
     const encoded = encodeURIComponent(messageText);
     const whatsappUrl = `https://wa.me/${targetPhone}?text=${encoded}`;
 
-    setTimeout(() => {
-      setStatus("success");
-      window.open(whatsappUrl, "_blank");
-    }, 600);
+    setStatus("success");
+    try {
+      const win = window.open(whatsappUrl, "_blank");
+      if (!win || win.closed || typeof win.closed === "undefined") {
+        window.location.href = whatsappUrl;
+      }
+    } catch {
+      window.location.href = whatsappUrl;
+    }
   };
 
   const resetForm = () => {

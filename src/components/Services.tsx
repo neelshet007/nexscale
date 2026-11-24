@@ -26,6 +26,30 @@ export default function Services() {
 
   const subsystemIcons = [TrendingUp, Users, Package, UserCheck];
 
+  const handleSelectService = (
+    e: React.MouseEvent,
+    serviceTitle: string,
+    customRequirementNote?: string
+  ) => {
+    e.preventDefault();
+    const contactElement = document.getElementById("contact");
+    if (contactElement) {
+      contactElement.scrollIntoView({ behavior: "smooth" });
+    }
+
+    // Trigger autofill in ContactForm
+    window.dispatchEvent(
+      new CustomEvent("nexscale:autofill-service", {
+        detail: {
+          service: serviceTitle,
+          requirements:
+            customRequirementNote ||
+            `We are interested in discussing ${serviceTitle} solutions for our business.`,
+        },
+      })
+    );
+  };
+
   return (
     <section id="services" className="py-24 relative overflow-hidden bg-gray-950/40 border-t border-white/5">
       {/* Background Glow Accents */}
@@ -69,13 +93,20 @@ export default function Services() {
                 <p className="text-sm text-gray-400 leading-relaxed mb-6">
                   {pillar.description}
                 </p>
-                <a
-                  href={`#contact?service=${encodeURIComponent(pillar.title)}`}
-                  className="inline-flex items-center gap-1.5 text-xs font-semibold text-white hover:text-violet-300 transition-colors"
+                <button
+                  type="button"
+                  onClick={(e) =>
+                    handleSelectService(
+                      e,
+                      pillar.title,
+                      "We are interested in discussing Custom Web Applications (Full-Stack Web Engineering) for our business operations."
+                    )
+                  }
+                  className="inline-flex items-center gap-1.5 text-xs font-semibold text-white hover:text-violet-300 transition-colors cursor-pointer"
                 >
                   <span>Discuss Web Engineering</span>
                   <ArrowRight className="w-3.5 h-3.5" />
-                </a>
+                </button>
               </div>
 
               <div className="lg:col-span-7">
@@ -204,13 +235,20 @@ export default function Services() {
                           <p className="text-sm text-gray-300 leading-relaxed mb-6">
                             {current.description}
                           </p>
-                          <a
-                            href={`#contact?service=${encodeURIComponent(businessPillar.title)}`}
-                            className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full text-xs font-semibold bg-emerald-600 text-white hover:bg-emerald-500 transition-colors shadow-lg shadow-emerald-600/20"
+                          <button
+                            type="button"
+                            onClick={(e) =>
+                              handleSelectService(
+                                e,
+                                "Business Systems & Automation",
+                                `We would like to discuss implementing ${current.title} (Business Systems & Automation) to scale our business operations.`
+                              )
+                            }
+                            className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full text-xs font-semibold bg-emerald-600 text-white hover:bg-emerald-500 transition-colors shadow-lg shadow-emerald-600/20 cursor-pointer"
                           >
                             <span>Request This Implementation</span>
                             <ArrowRight className="w-3.5 h-3.5" />
-                          </a>
+                          </button>
                         </div>
 
                         <div className="lg:col-span-7">
@@ -289,13 +327,20 @@ export default function Services() {
                 </div>
 
                 <div className="pt-4 border-t border-white/5">
-                  <a
-                    href={`#contact?service=${encodeURIComponent(pillar.title)}`}
-                    className="inline-flex items-center gap-1.5 text-xs font-semibold text-gray-300 group-hover:text-white transition-colors"
+                  <button
+                    type="button"
+                    onClick={(e) =>
+                      handleSelectService(
+                        e,
+                        pillar.title,
+                        `We are looking for consulting and engineering assistance regarding ${pillar.title} (${pillar.subtitle}).`
+                      )
+                    }
+                    className="inline-flex items-center gap-1.5 text-xs font-semibold text-gray-300 group-hover:text-white transition-colors cursor-pointer"
                   >
                     <span>Inquire About {pillar.title.split(" ")[0]}</span>
                     <ArrowRight className="w-3.5 h-3.5" />
-                  </a>
+                  </button>
                 </div>
               </div>
             );
